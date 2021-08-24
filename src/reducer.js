@@ -27,6 +27,12 @@ const reducer = (state, action) => {
                 ...state,
                 playlists: action.playlists
             }
+
+        case 'HOT_HITS_SRILANKA':
+            return {
+                ...state,
+                hot_hits_srilanka: action.hot_hits_srilanka,
+            }
         
         default:
             return state;

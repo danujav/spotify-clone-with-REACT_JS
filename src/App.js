@@ -37,8 +37,15 @@ function App() {
         dispatch({
           type: "SET_PLAYLISTS",
           playlists: playlists,
+        });
+      });
+
+      spotify.getPlaylist('37i9dQZF1DX4QcmlTAbT3k').then(response => 
+        dispatch({
+          type: "HOT_HITS_SRILANKA",
+          hot_hits_srilanka: response,
         })
-      })
+      )
     }
 
   }, []);
